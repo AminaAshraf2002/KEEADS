@@ -1,0 +1,630 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+ 
+}
+
+header.container {
+  padding: 0;
+  margin: 0 ;
+}
+
+/* Header */
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* transparent header */
+  padding: 0.5rem ;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  height: 120px;
+  margin-left: 1rem;
+
+}
+
+header.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+header.scrolled h1 {
+  color: #ffcc00; /* Change color on scroll */
+}
+
+/* Parallax Effect for the Cover Section */
+.cover-section {
+  position: relative;
+  height: 100vh; /* Full screen */
+  background-image: url('./images/cover4.jpeg'); /* Your cover image */
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; /* Ensures content scrolls over it */
+  margin: 0;
+  padding: 0;
+}
+
+/* Correct cover image alignment */
+.cover-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Add an overlay for better text visibility */
+  z-index: 0;
+}
+
+.cover-image img {
+  display: none; /* Hide the img tag if you're using background-image */
+}
+
+
+/* About Section */
+/* About Section */
+.about-section {
+  display: flex;
+  padding: 60px 15px;
+  align-items: flex-start; /* Align items at the top */
+  margin-bottom: -10%;
+ 
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.about-section .container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-section .image-container {
+  flex: 1;
+  max-width: 35%; /* Adjust the width of the image container */
+  padding-right: 40px; /* Space between image and text */
+  margin-top: -60px;
+}
+
+.about-section .image-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.about-section .text-container {
+  flex: 1;
+  max-width: 50%; /* Adjust the width of the text container */
+  padding-left: 20px;
+  text-align: left; /* Ensure text alignment to the left */
+}
+
+.about-section .heading {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 20px;
+ 
+}
+/* Styling for the entire services section */
+.services-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+/* Styling the container to align all the service items in a row */
+.services-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if there are too many cards to fit in one row */
+  justify-content: space-around; /* Evenly spaces the service items */
+  gap: 20px; /* Adds space between each card */
+}
+
+/* Each service card styling */
+/* Styling for the entire services section */
+.services-section {
+  text-align: center;
+  padding: 50px 20px; /* Increase the padding on the left and right sides */
+  background-color: #f9f9f9;
+}
+
+/* Styling the container to align all the service items in a row */
+.services-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if there are too many cards to fit in one row */
+  justify-content: space-around; /* Evenly spaces the service items */
+  gap: 20px; /* Adds space between each card */
+  max-width: 1200px; /* Optional: Set a max-width to control the container width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Each service card styling */
+/* Styling for the entire services section */
+.services-section {
+  text-align: center;
+  padding: 50px 20px; /* Increase the padding on the left and right sides */
+  background-color: #f9f9f9;
+  font-size: 1.5rem;
+}
+
+/* Styling the container to align all the service items in a row */
+.services-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping if there are too many cards to fit in one row */
+  justify-content: space-between; /* Evenly spaces the service items in each row */
+  gap: 20px; /* Adds space between each card */
+  max-width: 1200px; /* Optional: Set a max-width to control the container width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Each service card styling */
+.service-item {
+  flex: 1 1 calc(28% - 20px); /* 3 cards per row with space for gap */
+  box-sizing: border-box; /* Ensure padding and border are included in the total width */
+  margin: 10px 0; /* Top and bottom margin for vertical spacing */
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Slightly raise the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.service-card img {
+  width: 250px; /* Set a fixed image width */
+  height: 230px; /* Increase the image height */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+  padding: 10px;
+}
+.section__container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.banner__container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between cards */
+}
+
+.banner__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  gap: 20px; /* Space between cards */
+}
+
+.banner__card {
+  background-color: #ffffff; /* Card background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 200px; /* Grow and shrink with a minimum width */
+}
+
+.banner__card h4 {
+  margin: 0;
+  font-size: 2rem; /* Adjust font size as needed */
+  color: #333; /* Dark text color */
+}
+
+.banner__card p {
+  margin: 10px 0 0;
+  font-size: 1rem; /* Adjust font size as needed */
+  color: #666; /* Light text color */
+}
+/* Form Styles */
+.contact-form {
+  padding: 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.sectionHeader {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #000;
+  margin: 20px 0;
+}
+
+.para {
+  font-size: 1rem;
+  color: #666;
+  margin: 0 0 20px;
+}
+
+.contactForm {
+ 
+ 
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+ 
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+ 
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-container i {
+  margin-right: 10px;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.submit:hover {
+  background-color: #0056b3;
+}
+
+
+.map-container {
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.contactMethod {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.contactIcon {
+  margin-right: 10px;
+  color: rgb(25, 25, 97);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: black;
+  margin: 0 0 5px;
+}
+
+.contact-info {
+  font-size: 1rem;
+  color: #666;
+  padding: 20px;
+  margin: 0;
+}
+#contact {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+
+.heading2 h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+.icon-set{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.icon{
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid black;*/
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 15px;
+}
+.icon:hover{ 
+  /* background-color: orange ; */
+  background-image: linear-gradient(to bottom right , yellow, rgb(255, 81, 0));
+}
+.icon i{
+  color: black;
+  font-size: 1.5rem;
+}
+.icon:hover i{
+  color: white;
+  animation: shake  0.75s ;
+}
+@keyframes shake {
+  10%{
+      transform: rotate(15deg);
+  }
+  20%{
+      transform: rotate(-15deg);
+  }
+  30%{
+      transform: rotate(15deg);
+  }
+  40%{
+      transform: rotate(-15deg);
+  } 
+}
+footer p{
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bolder;
+} 
+/* Media Queries */
+/* Media Queries */
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+  /* For screens smaller than 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+    padding: 0.5rem; /* Reduced padding */
+    font-size: 0.9rem; /* Adjust font size if needed */
+  }
+
+  .logo {
+    margin: 20px; /* Reduced margin for smaller screens */
+    height: 70px; /* Reduced logo height for smaller screens */
+    margin-left: 0; /* Remove margin-left for smaller screens */
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.15rem; /* Further reduced padding */
+    font-size: 0.8rem; /* Further adjust font size if needed */
+  }
+
+  .logo {
+    margin: 10px; /* Further reduced margin */
+    height: 50px; /* Further reduced logo height */
+  }
+}
+  about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+  }
+
+  .about-section .image-container {
+    max-width: 100%;
+    padding-right: 0;
+    margin-top: 0;
+  }
+
+  .about-section .text-container {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .about-section .heading {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 16px;
+  }
+}
+
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    flex: 1 1 100%; /* Full width for each card */
+    max-width: 100%;
+  }
+
+  .contactForm {
+    grid-template-columns: 1fr;
+  }
+
+  .contactMethod {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .method {
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    padding: 0 10px;
+  }
+
+  .banner__card {
+    flex: 1 1 100%; /* Full width for each banner card */
+    max-width: 100%;
+  }
+
+
+/* Tablet Devices */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 15px;
+  }
+
+  .about-section .image-container {
+    max-width: 50%;
+    padding-right: 20px;
+  }
+
+  .about-section .text-container {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row with space for gap */
+  }
+
+  .contactForm {
+    grid-template-columns: 1fr;
+  }
+
+  .contactMethod {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner__card {
+    flex: 1 1 45%; /* Adjust size for tablets */
+    max-width: 45%;
+  }
+}
+
+/* Desktop Devices */
+@media screen and (min-width: 1025px) {
+  .header {
+    text-align: left;
+  }
+
+  .about-section {
+    flex-direction: row;
+    padding: 60px 15px;
+  }
+
+  .about-section .image-container {
+    max-width: 35%;
+    padding-right: 40px;
+    margin-top: -60px;
+  }
+
+  .about-section .text-container {
+    max-width: 50%;
+    padding-left: 20px;
+  }
+
+  .services-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .service-item {
+    flex: 1 1 calc(33% - 20px); /* 3 cards per row with space for gap */
+  }
+
+  .contactForm {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contactMethod {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .banner__card {
+    flex: 1 1 30%; /* Adjust size for desktops */
+    max-width: 30%;
+  }
+}

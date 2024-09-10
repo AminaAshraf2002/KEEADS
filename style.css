@@ -509,7 +509,10 @@ footer p{
     font-size: 1.8rem; /* Slightly smaller for tablets */
     margin-bottom: 8px; /* Adjust margin for better spacing */
   }
-
+  .cover-section {
+    height: 75vh; /* Maintain original height for tablets and larger devices */
+    background-size: cover; /* Maintain original background size */
+  }
   .heading {
     font-size: 1.2rem; /* Smaller font for tablets */
     margin: 18px 0; /* Adjust margin for tablets */
@@ -522,6 +525,7 @@ footer p{
     font-size: 24px; /* Slightly smaller font size for tablets */
     margin-bottom: 25px; /* Adjust margin for better spacing */
   }
+
 }
 
 /* For mobile devices */
@@ -529,6 +533,10 @@ footer p{
   .text-container {
     max-width: 100%; /* Full width on mobile */
     padding: 0 10px; /* Adjust padding for mobile */
+  }
+  .cover-section {
+    height: 48vh; /* Adjust height for very small screens */
+    background-size: auto 100%; /* Adjust background size */
   }
 
   .about-section .container {
@@ -631,7 +639,10 @@ footer p{
   .header {
     text-align: left;
   }
-
+  .cover-section {
+    background-size: cover;
+    height: 75vh;
+  }
   .about-section {
     flex-direction: row;
     padding: 60px 15px;

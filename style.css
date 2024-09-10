@@ -71,7 +71,7 @@ header.scrolled h1 {
 .cover-section::before {
   content: "";
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -80,10 +80,24 @@ header.scrolled h1 {
   z-index: 0;
 }
 
+/* Hide the img tag if you're using background-image */
 .cover-image img {
-  display: none; /* Hide the img tag if you're using background-image */
+  display: none;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cover-section {
+    height: 50vh; /* Adjust height for smaller screens */
+    background-attachment: scroll; /* Disable parallax effect for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-section {
+    height: 40vh; /* Further adjust height for very small screens */
+  }
+}
 
 /* About Section */
 /* About Section */
